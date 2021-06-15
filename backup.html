@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/6f34f904f9.js" crossorigin="anonymous"></script>
+	<script>
+		function myFunction() {
+			let dropDownElement = document.getElementById("demo")
+			if(dropDownElement.style.display === "none" || dropDownElement.style.display == "") {
+				dropDownElement.style.display = "block";
+			} else {
+				dropDownElement.style.display = "none";
+			}
+		}
+	</script>
+	<title>Landing Page</title>
+	<style>
+		body{
+			font-family: 'Open Sans', sans-serif;
+			background-color:#F0F5FC;
+			margin:0px;
+		}
+
+		.header{
+			display: flex;
+			justify-content: space-around;
+			height: 80px;
+			align-items: center;
+			margin: auto;
+			width: 92%;
+		}
+
+		.dropdown{
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content{
+			display: none;
+			position: absolute;
+			z-index: 1;
+			min-width: 200px;
+			background-color: #3B368C;
+			animation: growDown 300ms ease-in-out forwards;
+			transform-origin: top center;
+		}
+		.dropdown-content a{
+			text-decoration:none;
+			display: block;
+			color: white;
+			width:80%;
+			
+		}
+		.dropdown-content a:hover {
+			background-color: white;
+			color:red;
+		}
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		.btn{
+			color:#443F92;
+			cursor:pointer;
+		}
+		.hr-align{
+			border-bottom: 1px;
+			margin: 0px;
+		}
+		.dropdown i {
+			color:#3B368C;
+		}
+		.border{
+			height:50px;
+			width:166px;
+			border-radius:27px;
+			color:#3B368C;
+			border:1px solid blue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+		.border:hover{
+			background-color: white;
+		}
+		.dropdown-align{
+			display: flex;
+			justify-content: space-between;
+			width: 535px;
+		}
+
+		#demo {
+			display: none;
+		}
+
+		@keyframes growDown {
+			0% {
+				transform: scaleY(0)
+			}
+			80% {
+				transform: scaleY(1.1)
+			}
+			100% {
+				transform: scaleY(1)
+			}
+		}
+		.down-content{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 30px;
+			width: 93%;
+			margin: auto;
+			
+		}
+		.down-content i{
+			color:white;
+		}
+		.down-content1{
+			height:30px;
+			display: flex;
+			align-items: center;
+			padding-left: 10px;
+		}
+		.flex{
+			display: flex;
+		}
+		.h1-font{
+			color:#3B368C;
+			font-size: 76px;
+			width:80%;
+			line-height: 86px;
+		}
+		.p-font{
+			font-size: 24px;
+			color:#714C89;
+			width:80%;
+			margin-top:-26px;
+			
+		}
+		.border-1{
+			height:61px;
+			width:212px;
+			border-radius: 32px;
+			background-color:#4458F3;
+			color:#FFFFFF;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 600;
+		}
+		.video-align{
+			display: flex;
+			align-items: center;
+			color:#504C89;
+			font-weight: 600;
+			padding-left: 20px;
+			cursor: pointer;
+		}
+		.img{
+			padding-left: 20px;
+			cursor: pointer;
+
+		}
+		.content-align{
+			margin-top: 200px;
+			margin-left: 86px;
+		}
+		.flex1{
+			display: flex;
+			flex-direction: column;
+			padding-left: 27px;
+
+		}
+		.subscription {
+			display: flex;
+			width:67%;
+			margin-top: 150px;
+		}
+		.h5-color{
+			color: #ff8a00;
+			font-size: 24px;
+			font-weight: 600;
+		}
+		.h2-align{
+			font-size: 36px;
+			color: #3B368C;
+			margin-top: -25px;
+			width: 62%;
+			font-weight: 700;
+			line-height: 46px;
+		}
+		.h2-align1{
+			font-size: 54px;
+			color: #3B368C;
+			margin-top: -25px;
+			width: 62%;
+			font-weight: 700;
+			line-height: 46px;
+		}
+		.h2-align2{
+			font-size: 54px;
+			color: #3B368C;
+			margin-top: -25px;
+			width: 52%;
+			font-weight: 700;
+			line-height: 71px;
+			text-align: center;
+		}
+		.p-align{
+			color:#714C89;
+			width: 93%;
+			margin-top: -10px;
+		}
+		.p-align1{
+			color:#714C89;
+			width: 58%;
+			margin-top: 2px;
+		}
+		.p-align2{
+			color:#714C89;
+			width: 53%;
+			margin-top: 2px;
+			font-size: 18px;
+		}
+
+		.features{
+			margin-left: 86px;
+		}
+		.border-2{
+			height:80px;
+			width:250px;
+			border-radius:5px;
+			border:1px solid #D3D2F7;
+		}
+		.border-2 :hover{
+			background-color: white;
+		}
+		.h6-font{
+			color:#3B368C;
+			font-size:18px;
+			font-weight:500;
+			margin: 0px;
+			padding-left: 14px;
+			
+		}
+		.border-2align{
+			display: flex;
+			align-items: center;
+			height: 80px;
+			width: 90%;
+			margin: auto;
+		}
+		.margin-align{
+			margin-left: 30px;
+		}
+		.features-align{
+			margin-top: 67px;
+		}
+		.h4-align{
+			margin:0px;
+			color:#3B368C;
+			font-size: 24px;
+			width: 48%;
+		}
+		.btn-align{
+			margin-top: 40px
+		}
+		.btn-left{
+			margin-left: 13px;
+		}
+		.btn1{
+			height:57px;
+			width:211px;
+			background-color:#3957F6;
+			border-radius:38px;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+		.btn1:hover{
+			background-color: white;
+			color:blue;
+			border:1px solid #cac7f6;
+		}
+		.btn2{
+			height:57px;
+			width:180px;
+			border-radius:38px;
+			color:#334081;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border:1px solid #D7D7F8;
+		}
+		.btn2:hover{
+			color:white;
+			background-color:#3957F6;
+		}
+		.border-pricing{
+			height:571px;
+			width:540px;
+		}
+		.border-pricing-align{
+			margin-right: 128px;
+		}
+		.pricing{
+			height:60%;
+			background-image:linear-gradient(#FBFBFF,#E4E4FD);
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+		}
+		.pricing1{
+			height:40%;
+			background-color: white;
+			border-bottom-left-radius: 30px;
+			border-bottom-right-radius: 30px;
+		}
+		.pricing-align{
+			color:#3B6EBC;
+			text-align: center;
+			padding-top: 35px;
+			font-size: 18px;
+		}
+		.border-3{
+			height:42px;
+			width:270px;
+			border-radius:28px;
+			border:1px solid #D5D3F8; 
+			background-color:#E5E5F8;
+			color:#6C36A8;
+			cursor: pointer;
+			position: relative;
+			display: inline-block;
+		}
+		.border-3 i{
+			color:#999999;
+		}
+		.border-3-align{
+			padding-top: 24px;
+			justify-content: center;
+			display: flex;
+
+		}
+		.basic-align{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 42px;
+			width: 91%;
+			margin: auto;
+		}
+		.dropdown-basiccontent{
+			display: none;
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 82px;
+			overflow-y:auto;
+			background-color: white;
+			border-radius: 1px;
+		}
+
+		.dropdown-basiccontent a{
+			text-decoration: none;
+			display: block;
+		}
+		.price-font{
+			color:#750CCA;
+			font-size: 54px;
+			margin-bottom: 0px;
+		}
+		.flex-2 span{
+			color:#714C89;
+			padding-left:47px;
+			font-size:18px;
+		}
+		.flex-2{
+			display: flex;
+			flex-direction: column;
+		}
+		.price-font-align{
+			display: flex;
+			width: 83%;
+			margin: auto;
+		}
+		.hr-align1{
+			margin-top: 46px;
+			color: #8585C6;
+		}
+		.button-1{
+			height:68px;
+			width:273px;
+			border-radius:38px;
+			background-color:#EE4730; 
+			color:white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight:600;
+		}
+		.button-1:hover{
+			color:#EE4730;
+			background-color: white;
+			border:1px solid #EE4730;
+		}
+		.button-1-align{
+			padding-top: 46px;
+			justify-content: center;
+			display: flex;
+		}
+		.i-border{
+			height:60px;
+			width:60px;
+			background-color:#EE4730;
+			border-radius: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.i-border1{
+			height:60px;
+			width:60px;
+			background-color:#B7B9CF;
+			border-radius: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.i-border,.i-border1 i{
+			color:white;
+		}
+		.i-border-align{
+			display: flex;
+			justify-content: space-between;
+			width: 38%;
+			margin: auto;
+			padding-top: 23px;
+		}
+		.i-border1:hover{
+			background-color:#EE4730 ;
+		}
+		.slidecontainer {
+			width: 95%;
+			margin: auto;
+			padding-top: 52px;
+		}
+
+		.slider {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 12px;
+			border-radius: 28px;
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+		}
+
+		.slider:hover {
+			opacity: 1;
+		}
+
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #04AA6D;
+			cursor: pointer;
+		}
+
+		.slider::-moz-range-thumb {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #04AA6D;
+			cursor: pointer;
+		}
+		.newfeatures{
+			display: flex;
+			background-image:url("http://pixner.net/mosto/demo/ltr/light/assets/images/bg/newslater.jpg");
+			background-repeat: no-repeat;
+			margin-top: 440px;
+
+		}
+		.img-align{
+			margin-left: -259px;
+			margin-top: -186px;
+		}
+		.h2-align1{
+			font-size: 54px;
+			color: white;
+			margin-top: -33px;
+		}
+		.p-align3{
+			color:#CBE7F7;
+			font-size:18px;
+			margin-top: -27px;
+			width: 67%;
+		}
+		.input{
+			height: 60px;
+			width: 544px;
+			border-radius: 38px;
+			outline: 0;
+			border: 1px solid #C1C3F0;
+			background-color: transparent;
+			color: white;
+			padding-left: 30px;
+		}
+		::placeholder {
+			color: #8E8BD2;
+			font-size:18px;
+		}
+		.input-align{
+			position: relative;
+
+		}
+		.btn-align1{
+			padding-top: 40px;
+		}
+		.subscribe-align{
+			position: absolute;
+			height: 60px;
+			width: 165px;
+			border-radius: 38px;
+			right: 225px;
+			top: 1px;
+			background-image: linear-gradient(to right, #9461E5,#3F58F4 );
+			border: 1px solid #9961E4;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			color:white;
+			font-size: 18px;
+			font-weight: 600;
+			cursor: pointer;
+		}
+		.newfeatures-align{
+			margin-top: 133px;
+			margin-left: 37px;
+		}
+		.icon-color{
+			color:#FFCC00;
+		}
+		.no-color{
+			color:#654C89;
+			font-size: 18px;
+			font-weight:600;
+		}
+		.no-color1{
+			color: #38A20E;
+			font-size: 40px;
+			font-weight: 700;
+			margin-top: 10px;
+		}
+		.review-color{
+			color:#3B369A;
+			font-size: 18px;
+		}
+		.i-color{
+			color:#337ADB;
+		}
+		.review-align{
+			margin-top: -11px;
+		}
+		.review-content{
+			display:flex;
+			margin-left: 86px;
+			margin-top:51px;
+		}
+		.review{
+			width: 22%;
+			margin: auto;
+		}
+		.map{
+			height:650px;
+			width:1100px;
+			margin:auto;
+			margin-top: 48px;
+			background-image: url("http://pixner.net/mosto/demo/ltr/light/assets/images/bg/world-map.png");
+			background-repeat: no-repeat;
+			
+		}
+		.country{
+			height:214px;
+			width: 214px;
+			border-radius:114px;
+			background-image: linear-gradient(to right, #E28772,#E84295 );
+			color:#FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.country1{
+			height:155px;
+			width: 155px;
+			border-radius:114px;
+			background-image: linear-gradient(to right, #F7CE68,#FCA781 );
+			color:#FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.country2{
+			height:155px;
+			width: 155px;
+			border-radius:114px;
+			background-image: linear-gradient(to right, #7BC0FB,#5F76F8 );
+			color:#FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.country3{
+			height:155px;
+			width: 155px;
+			border-radius:114px;
+			background-image: linear-gradient(to right, #C87EDF,#826DE7 );
+			color:#FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.country4{
+			height:100px;
+			width: 100px;
+			border-radius:114px;
+			background-image: linear-gradient(to right, #D23E9D,#8965DD );
+			color:#FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.country5{
+			height:100px;
+			width: 100px;
+			border-radius:114px;
+			background-image: linear-gradient(to right, #92E892,#6CBCE4 );
+			color:#FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.country span{
+			font-size: 18px;
+		}
+		.country h2{
+			font-size: 54px;
+			margin: 0
+		}
+		.country1 span{
+			font-size: 16px;
+		}
+		.country1 h2{
+			font-size: 40px;
+			margin: 0
+		}
+		.country2 span{
+			font-size: 16px;
+		}
+		.country2 h2{
+			font-size: 40px;
+			margin: 0
+		}
+		.country3 span{
+			font-size: 16px;
+		}
+		.country3 h2{
+			font-size: 40px;
+			margin: 0
+		}
+		.country4 span{
+			font-size: 16px;
+		}
+		.country4 h2{
+			font-size: 28px;
+			margin: 0
+		}
+		.country5 span{
+			font-size: 16px;
+		}
+		.country5 h2{
+			font-size: 28px;
+			margin: 0
+		}
+		.country-align{
+			margin-top: 59px;
+			margin-left: 51px;
+		}
+		.country1-align{
+			margin-top: 93px;
+			margin-left: 292px;
+		}
+		.country2-align{
+			margin-top: 75px;
+			margin-left: 86px;
+		}
+		.country3-align{
+			margin-top: 123px;
+			margin-left: 253px;
+		}
+		.country4-align{
+			margin-top: 59px;
+			margin-left: 86px;
+		}
+		.country5-align{
+			margin-top: 129px;
+			margin-left:284px;
+		}
+		.Testimonials{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.border-4{
+			height:570px;
+			width:1110px;
+			margin: auto;
+			border-radius:29px;
+			background-image:linear-gradient(to right, #CD93EF,#8663F3);
+		}
+		.img-1{
+			height: 109px;
+			width: 108px;
+			border-radius: 57px;
+			margin-left: 278px
+		}
+		.img-0{
+			margin-left: 139px;
+		}
+		.review-border{
+			height:55px;
+			width:213px;
+			background-color:#735FF1;
+			border-radius:42px;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color:#FBF7FF;
+			font-size:18px;
+			font-weight: 700;
+		}
+		.review-border:hover{
+			background-color:#FBF7FF;
+			color:red; 
+		}
+		.review-border-align{
+			padding-top: 35px;
+			display: flex;
+			justify-content: flex-end;
+			padding-right: 35px;
+		}
+		.star-align{
+			display: flex;
+			justify-content: center;
+			margin-top: 33px;
+		}
+		.star-align i{
+			color:#FFCC00;
+		}
+		.p-align4{
+			font-size: 24px;
+			width: 66%;
+			margin: auto;
+			text-align: center;
+			padding-top: 15px;
+			color:#FFFFFF;
+			font-weight: 700;
+		}
+		.border-5{
+			height:50px;
+			width:170px;
+			color:#FFFFFF;
+			background-color:#8E67D9;
+			border-radius: 30px;
+			font-size:24px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 600;
+		}
+		.border-5align{
+			display: flex;
+			justify-content: center;
+			margin-top: 45px;
+		}
+		.img2{
+			display: flex;
+			justify-content: flex-end;
+			margin-right: 108px;
+		}
+		.question{
+			display: flex;
+			margin-top: 130px;
+			margin-left: 86px;
+
+		}
+		.h2-align3{
+			font-size: 54px;
+			width: 132%;
+			margin-top: 19px;
+			color: #3B368C;
+			line-height:66px;
+			margin-bottom: 25px;
+		}
+		.align{
+			font-size: 18px;
+			color:#4A499A;
+			cursor: pointer;
+		}
+		
+		.align:hover{
+			color:#dc3545;
+		}
+		.icon-btn{
+			height:65px;
+			width:65px;
+			border-radius:35px;
+			border:1px solid #DADFED;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color:#33406A;
+		}
+		.h4-align1{
+			font-size: 28px;
+			font-weight: 600;
+			color:#3B368C;
+			margin: 0px;
+			padding-left: 32px;
+		}
+		.question-align{
+			margin-left: 304px;
+		}
+		.p-align5{
+			width:64%;
+			color:#744C89;
+			padding-left: 99px;
+			margin-top: -9px;
+			font-size: 18px;
+
+		}
+		.border-trial{
+			height:380px;
+			width:1100px;
+			margin:auto;
+			background-image:linear-gradient(to right, #5C68F2,#AF68FC);
+			border-radius: 30px;
+			position: relative;
+		}
+		.border-trial-align{
+			margin-top: 95px;
+		}
+		.border-img{
+			margin-top: -34px;
+			margin-left: 20px;
+			position: absolute;
+		}
+		.h3-align{
+			font-size: 36px;
+			color:#FFFFFF;
+			padding-top: 65px;
+			padding-left: 34px;
+			width: 39%;
+		}
+		.p-align6{
+			color:#EFF0FE;
+			padding-left: 41px;
+			font-size: 20px;
+			width: 55%;
+
+		}
+		.trial-btn{
+			height:50px;
+			width:200px;
+			border-radius: 30px;
+			color:#FFFFFF;
+			border: 1px solid #C087FA;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 600;
+			font-size: 18px;
+			cursor: pointer;
+			z-index: 1;
+		}
+		.trial-btn-align{
+			margin-top: 173px;
+			margin-right: 51px;
+		}
+		.trial-btn:hover{
+			background-color:#FFFFFF;
+			color:#dc3545;
+		}
+		.footer{
+			height:469px;
+			margin-top: 116px;
+			background-image: url("http://pixner.net/mosto/demo/ltr/light/assets/images/footer/footer-bg.jpg");
+			background-repeat: no-repeat;
+		}
+		.logo-align{
+			text-align: center;
+			padding-top: 94px;
+		}
+		.icon-border{
+			height:36px;
+			width:36px;
+			border-radius:30px;
+			border:1px solid #4c218b;
+			color:#FFFFFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			font-size: 18px;
+		}
+		.icon-align{
+			display: flex;
+			justify-content: space-between;
+			width:20%;
+			margin: auto;
+			padding-top: 30px;
+		}
+		.icon-border:hover{
+			background-color:#ee4730;
+			border:1px solid #ee4730;
+		}
+		.hr-align2{
+			height:19px;
+			width:2px;
+			background-color:#5E5BB7;
+			border: 0;
+		}
+		.footer-bottom{
+			display: flex;
+			justify-content: space-between;
+			width:50%;
+			margin: auto;
+			align-items: center;
+			padding-top: 80px;
+			color:#FFFFFF;
+		}
+		.footer-bottom1{
+			text-align: center;
+			color:#FFFFFF;
+			border-top: 1px solid #49329b;
+			padding-top:24px;
+			width:78%;
+			margin: auto;
+			margin-top: 21px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div>
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/logo/logo2.png">
+		</div>
+		<div>
+			<div class="dropdown-align">
+				<div class="dropdown">
+					<span class="btn"><b>Home</b></span>&nbsp;<i class="fas fa-chevron-down"></i>
+					<div class="dropdown-content">
+						<div class="down-content">
+							<a href="#">Home Apps</a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home Messenger</a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home Web</a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home Desktop</a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home Watchapp </a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home Hero Video </a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home 16 </a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home 17 </a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content">
+							<a href="#">Home 18</a>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span class="btn"><b>Feature</b></span>&nbsp;<i class="fas fa-chevron-down"></i>
+					<div class="dropdown-content">
+						<div class="down-content1">
+							<a href="#">Feature 1</a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Feature 2 </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Feature 3</a>
+						</div>
+					</div>
+				</div>
+
+				<span class="btn"><b>Pricing</b></span>
+
+				<div class="dropdown">
+					<span class="btn"><b>Pages</b></span>&nbsp;<i class="fas fa-chevron-down"></i>
+					<div class="dropdown-content">
+						<div class="down-content1">
+							<a href="#">About </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">App Download </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Team </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Account </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Faqs </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Partners </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Privacy policy </a>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<span class="btn"><b>Blog</b></span>&nbsp;<i class="fas fa-chevron-down"></i>
+					<div class="dropdown-content">
+						<div class="down-content1">
+							<a href="#">Blog Style 1 </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Blog Style 2 </a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Blog Single 1</a>
+						</div>
+						<hr class="hr-align">
+						<div class="down-content1">
+							<a href="#">Blog Single 2</a>
+						</div>
+					</div>
+				</div>
+				<span class="btn"><b>Contact</b></span>
+			</div>
+		</div>
+
+		<div>
+			<div class="dropdown">
+				<span class="btn"><b>EN</b></span>&nbsp;<i class="fas fa-chevron-down"></i>
+				<div class="dropdown-content">
+					<a href="#">En</a>
+					<a href="#">Bn </a>
+					<a href="#">Pk</a>	
+					<a href="#">Fr</a>		
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="border">
+				<span>GET MOSTO</span>
+			</div> 
+
+		</div>
+	</div>
+	<div class="flex">
+		<div class="content-align">
+			<h1 class="h1-font">Simplify your life with Mosto</h1>
+			<p class="p-font">The simple, intuitive and powerful app that supports all modern devices and platforms.</p>
+			<div class="flex" >
+				<div class="border-1">
+					<span>TRY FOR FREE</span>
+				</div>
+				<div class="img">
+					<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/button/play2.png">
+				</div>
+				<span class="video-align">Play Video</span>
+			</div>
+			<div class="subscription ">
+				<div class="flex">
+					<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/icon/counter1.png">
+					<div class="flex1">
+						<span>17501</span>
+						<span>Premium User</span>
+					</div>
+				</div>
+				<hr>
+				<div class="flex">
+					<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/icon/counter2.png">
+					<div class="flex1">
+						<span>1987</span>
+						<span>Daily Visitors</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/banner/slide1.png">
+		</div>
+	</div>
+	<div class="flex" style="margin-top: 140px;">
+		<div class="features">
+			<h5 class="h5-color">An Exhaustive list of Amazing Features</h5>
+			<h2 class="h2-align">See what You Can Do with Mosto</h2>
+			<p class="p-align">Numerous features make it possible to customize the system in accordance with all your needs.</p>
+			<div class="flex features-align">
+				<div class="border-2">
+					<div class="border-2align">
+						<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/feature/01.png">
+						<h6 class="h6-font">Fast Performance</h6>
+					</div>
+				</div>
+				<div class="margin-align">
+					<div class="border-2">
+						<div class="border-2align">
+							<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/feature/02.png">
+							<h6 class="h6-font">Easy Customize</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex "style="margin-top: 20px;">
+				<div class="border-2">
+					<div class="border-2align">
+						<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/feature/03.png">
+						<h6 class="h6-font">Pure & Elegant</h6>
+					</div>
+				</div>
+				<div class="margin-align">
+					<div class="border-2">
+						<div class="border-2align">
+							<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/feature/04.png">
+							<h6 class="h6-font">Secure Data</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex"style="margin-top: 20px;">
+				<div class="border-2">
+					<div class="border-2align">
+						<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/feature/05.png">
+						<h6 class="h6-font">Quick Access</h6>
+					</div>
+				</div>
+				<div class="margin-align">
+					<div class="border-2">
+						<div class="border-2align">
+							<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/feature/06.png">
+							<h6 class="h6-font">24/7 Support</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="margin-left:44px;">
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/feature/feature02.png">
+		</div>
+	</div>
+	<div class="flex "style="margin-top:173px;">
+		<div class="flex">
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/collaboration/girl.png">
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/collaboration/mobile.png">
+		</div>
+		<div style="margin-left: 169px;">
+			<h5 class="h5-color">Intuitive interface for collaboration</h5>
+			<h2 class="h2-align">Easy & Perfect Solution</h2>
+			<p class="p-align">Numerous features make it possible to customize the system in accordance with all your needs.</p>
+			<div class="flex">
+				<i class="fas fa-laptop fa-3x"></i>
+				<div class="flex1">
+					<h4 class="h4-align">Easy to Manage Your All Data</h4>
+					<p class="p-align1">The satisfaction of users is the most important and the focus is on usability and completeness</p>
+				</div>
+			</div>
+			<br>
+			<div>
+				<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/collaboration/left.png">
+				<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/collaboration/right.png">
+			</div>
+		</div>
+	</div>
+	<div class="flex features">
+		<div>
+			<h5 class="h5-color">Also Available in</h5>
+			<h2 class="h2-align">Smart Watch Version</h2>
+			<p class="p-align2">Everything about mosto is designed to be easy. You can download it right now from the App Store or Play Market. Moreover, with just a few steps, you can migrate your content automatically and securely from your Android device with the Move to iOS app.</p>
+			<div class="btn-align">
+				<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/button/google.png">
+				<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/button/apple.png"class="btn-left">
+			</div>
+		</div>
+		<div>
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/watch/watch2.png">
+		</div>
+	</div>
+	<div class="flex features">
+		<div>
+			<h5 class="h5-color">Choose a plan that's right for you</h5>
+			<h2 class="h2-align">Simple, Affordable Pricing Plans.</h2>
+			<p class="p-align1">Mosto has plans, from free to paid, that scale with your needs. Subscribe to a plan that fits the size of your business.</p>
+			<div class="flex btn-align">
+				<div class="btn1">
+					<span>START A FREE TRIAL</span>
+				</div>
+				<div class="btn2 btn-left">
+					<span>VIEW PRICING</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="border-pricing-align">
+			<div class="border-pricing">
+				<div class="pricing">
+					<div class="pricing-align">
+						<span>Pricing Options</span>
+					</div>
+					<div class="border-3-align">
+						<div class="border-3" onclick="myFunction()">
+							<div class="basic-align">
+								<span>Basic</span>
+								<i class="fas fa-chevron-down"></i>
+							</div>
+							<div class="dropdown-basiccontent" id="demo">
+								<a href="#">Basic</a>
+								<a href="#">Standard</a>
+								<a href="#">Premium</a>
+								<a href="#">Premium Pro</a>
+							</div>
+						</div>
+					</div>
+					<div class="price-font-align">
+						<div class="flex-2">
+							<h2 class="price-font"><sup>$</sup>15.00</h2>
+							<span>Per Month</span>
+						</div>
+						<hr class="hr-align1">
+						<div class="flex-2">
+							<h2 class="price-font"><sup>$</sup>199.00</h2>
+							<span>Per Year</span>
+						</div>
+					</div>
+					<div>
+						<div class="slidecontainer">
+							<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+						</div>
+					</div>
+				</div>
+				<div class="pricing1">
+					<div class="button-1-align">
+						<div class="button-1">
+							DOWNLOAD APP
+						</div>
+					</div>
+					<div class="i-border-align">
+						<div class="i-border">
+							<i class="fab fa-windows fa-2x"></i>
+						</div>
+						<div class="i-border1">
+							<i class="fab fa-apple fa-2x"></i>
+						</div>
+						<div class="i-border1">
+							<i class="fab fa-android fa-2x"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="newfeatures">
+		<div class="img-align">
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/newslater/newslater1.png">
+		</div>
+		<div>
+			<div class="newfeatures-align">
+				<h5 class="h5-color">Be the first to know</h5>
+				<h2 class="h2-align1">About New Features</h2>
+				<p class="p-align3">If you want to receive monthly updates from us just pop your email in the box. You can unsubscribe at any time. Your privacy & personal information will be treated.</p>
+				<div class="btn-align1">
+					<div class="input-align" >
+						<input type="text" placeholder="Enter Your Email" class="input">
+						<div class="subscribe-align">
+							<span>SUBSCRIBE</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="review-content">
+		<div>
+			<h5 class="h5-color">Our stats say more than any words</h5>
+			<h2 class="h2-align">Apps Without Borders</h2>
+			<p class="p-align2">Mosta app are growing by 300% every year with a steady love from users around the world. We are also close to achieving 10 million cumulative downloads.</p>
+		</div>
+		<div class="review">
+			<div class="icon-color">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<span class="no-color">5.0 / 5.0</span>
+			</div>
+			<h2 class="no-color1">312,921+</h2>
+			<div class="review-align">
+				<span class="review-color">Total User Reviews </span>&nbsp;
+				<i class="fas fa-paper-plane i-color"></i>
+			</div>
+		</div>
+	</div>
+	<div class="map">
+		<div class="flex">
+			<div class="country-align">
+				<div class="country">
+					<span>North America</span>
+					<h2>70.7%</h2>
+				</div>
+			</div>
+			<div class="country1-align">
+				<div class="country1">
+					<span>North Europe</span>
+					<h2>8.4%</h2>
+				</div>
+			</div>
+			<div class="country2-align">
+				<div class="country2">
+					<span>Asia </span>
+					<h2>14.4%</h2>
+				</div>
+			</div>
+		</div>
+		<div class="flex">
+			<div class="country3-align">
+				<div class="country3">
+					<span>South America</span>
+					<h2>1.8%</h2>
+				</div>
+			</div>
+			<div class="country4-align">
+				<div class="country4">
+					<span>Africa</span>
+					<h2>1.8%</h2>
+				</div>
+			</div>
+			<div class="country5-align">
+				<div class="country5">
+					<span>Australia </span>
+					<h2>3%</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Testimonials">
+		<h5 class="h5-color">Testimonials</h5>
+		<h2 class="h2-align2">5000+ happy clients all around the world</h2>
+	</div>
+	<div>
+		<div class="border-4">
+			<div class="review-border-align">
+				<div class="review-border">
+					<span>LEAVE A REVIEW</span>&nbsp;<i class="fas fa-arrow-right"></i>
+				</div>
+			</div>
+			<div>
+				<img src="http://pixner.net/mosto/demo/ltr/light/assets/css/img/before.png" class="img-0">
+				<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/client/client1.jpg" class="img-1">
+			</div>
+			<div class="star-align">
+				<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+			</div>
+			<div class="p-align4">
+				<p>Awesome product. The guys have put huge effort into this app and focused on simplicity and ease of use.</p>
+			</div>
+			<div class="border-5align">
+				<div class="border-5">
+					<span>Bela Bose</span>
+				</div>
+			</div>
+			<div class="img2">
+				<img src="http://pixner.net/mosto/demo/ltr/light/assets/css/img/after.png">
+			</div>
+		</div>
+	</div>
+	<div class="question">
+		<div>
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/cate.png">
+			<h2 class="h2-align3">Frequently Asked Questions</h2>
+			<div class="align">
+				<span >More Questions </span>
+				&nbsp;<i class="fas fa-arrow-right "></i>
+			</div>
+		</div>
+		<div class="question-align">
+			<div class="flex">
+				<div class="icon-btn">
+					<i class="far fa-file-pdf fa-2x"></i>
+				</div>
+				<h4 class="h4-align1">Is the Web App Secure?</h4>
+			</div>
+			<p class="p-align5">Web application security is the process of protecting websites and online services against different security threats that exploit vulnerabilities in an application’s code.</p>
+			<div class="flex">
+				<div class="icon-btn">
+					<i class="far fa-file-pdf fa-2x"></i>
+				</div>
+				<h4 class="h4-align1">What features does the Web App have?</h4>
+			</div>
+			<p class="p-align5">Both the Mobile Apps and the Web App give you the ability to you to access your account information, view news releases, report an outage, and contact us via email or phone.</p>
+			<div class="flex">
+				<div class="icon-btn">
+					<i class="far fa-file-pdf fa-2x"></i>
+				</div>
+				<h4 class="h4-align1">How do I get the Mobile App for my phone?</h4>
+			</div>
+			<p class="p-align5">Both the Mobile Apps and the Web App give you the ability to you to access your account information, view news releases, report an outage, and contact us via email or phone.</p>
+			<div class="flex">
+				<div class="icon-btn">
+					<i class="far fa-file-pdf fa-2x"></i>
+				</div>
+				<h4 class="h4-align1">How does Mosto differ from usual apps?</h4>
+			</div>
+			<p class="p-align5">Both the Mobile Apps and the Web App give you the ability to you to access your account information, view news releases, report an outage, and contact us via email or phone.</p>
+		</div>
+	</div>
+	<div class="border-trial-align">
+		<div class="border-trial">
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/balls/balls.png" class="border-img">
+			<div class="flex">
+				<div>
+					<h3 class="h3-align">Start your 30 days free trials today!</h3>
+					<p class="p-align6">We have provided 30 Days Money BackGuarantee in case of dissatisfaction with our product.</p>
+				</div>
+				<div class="trial-btn-align" >
+					<div class="trial-btn">
+						<span>GET FREE TRIAL</span>
+						&nbsp;<i class="fas fa-arrow-right"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="logo-align">
+			<img src="http://pixner.net/mosto/demo/ltr/light/assets/images/logo/footer-logo.png">
+		</div>
+		<div class="icon-align">
+			<div class="icon-border">
+				<i class="fab fa-facebook-f"></i>
+			</div>
+			<div class="icon-border">
+				<i class="fab fa-twitter"></i>
+			</div>
+			<div class="icon-border">
+				<i class="fab fa-pinterest-p"></i>
+			</div>
+			<div class="icon-border">
+				<i class="fab fa-google-plus-g"></i>
+			</div>
+			<div class="icon-border">
+				<i class="fab fa-instagram"></i>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<span>About</span>
+			<hr class="hr-align2">
+			<span>FAQS</span>
+			<hr class="hr-align2">
+			<span>Contact</span>
+			<hr class="hr-align2">
+			<span>Terms Of Service</span>
+			<hr class="hr-align2">
+			<span>Privacy</span>
+		</div>
+		<div class="footer-bottom1">
+			<span>Copyright © 2021.All Rights Reserved By Mosto</span>
+		</div>
+
+	</div>
+
+</body>
+</html>
